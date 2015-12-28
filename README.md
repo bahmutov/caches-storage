@@ -15,7 +15,9 @@ but looks just like promise-returning `localStorage`
 
 ```js
 var cachesStorage = require('caches-storage')
-cachesStorage.setItem('foo', { name: 'Joe' })
+var optionalName = 'my-app'
+cachesStorage(optionalName)
+    .setItem('foo', { name: 'Joe' })
     .then(function () {
         return cachesStorage.getItem('foo')
     })

@@ -60,8 +60,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	  throw new Error('Cannot find object caches?! Cannot init cache-storage')
 	}
 	/* global caches, Response */
-	function dataStore () {
-	  var id = 'cache-storage-v1'
+	function dataStore (name) {
+	  var id = name ? name + '-v1' : 'cache-storage-v1'
 	  return caches.open(id)
 	    .then(function (cache) {
 	      return {
