@@ -3,7 +3,7 @@
 if (typeof caches === 'undefined') {
   throw new Error('Cannot find object caches?! Cannot init cache-storage')
 }
-/* global caches */
+/* global caches, Response */
 function dataStore () {
   var id = 'cache-storage-v1'
   return caches.open(id)
