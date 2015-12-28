@@ -1,8 +1,8 @@
 {
-  "name": "cache-storage",
+  "name": "caches-storage",
   "description": "It is just like localStorage - but built on top of Cache API",
-  "version": "0.0.0-semantic-release",
   "main": "src/cache-storage.js",
+  "version": "0.0.0-semantic-release",
   "dependencies": {},
   "devDependencies": {
     "pre-git": "3.1.1",
