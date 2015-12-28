@@ -45,7 +45,8 @@
         "simple"
       ],
       "pre-commit": [
-        "npm run test"
+        "npm run test",
+        "npm run build"
       ],
       "pre-push": [
         "npm run size"
