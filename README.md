@@ -1,10 +1,31 @@
 # caches-storage
 > It is just like localStorage - but built on top of Cache API
 
-[![NPM][cache-storage-icon] ][cache-storage-url]
+[![NPM][caches-storage-icon] ][caches-storage-url]
 
-[![Build status][cache-storage-ci-image] ][cache-storage-ci-url]
+[![Build status][caches-storage-ci-image] ][caches-storage-ci-url]
 [![semantic-release][semantic-image] ][semantic-url]
+
+Async storage built on top of [Cache API](https://developer.mozilla.org/en-US/docs/Web/API/Cache),
+but looks just like promise-returning `localStorage`
+
+## Install and use
+
+`npm install --save caches-storage`
+
+```js
+var cachesStorage = require('caches-storage')
+cachesStorage.setItem('foo', { name: 'Joe' })
+    .then(function () {
+        return cachesStorage.getItem('foo')
+    })
+    .then(function (result) {
+        console.log(result);
+        // { name: 'Joe' }
+    })
+```
+
+The value is JSON serialized.
 
 ### Small print
 
@@ -19,7 +40,7 @@ License: MIT - do anything with the code, but don't blame me if it does not work
 Spread the word: tweet, star on github, etc.
 
 Support: if you find any problems with this module, email / tweet /
-[open issue](https://github.com/bahmutov/cache-storage/issues) on Github
+[open issue](https://github.com/bahmutov/caches-storage/issues) on Github
 
 ## MIT License
 
@@ -46,9 +67,9 @@ WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 OTHER DEALINGS IN THE SOFTWARE.
 
-[cache-storage-icon]: https://nodei.co/npm/cache-storage.png?downloads=true
-[cache-storage-url]: https://npmjs.org/package/cache-storage
-[cache-storage-ci-image]: https://travis-ci.org/bahmutov/cache-storage.png?branch=master
-[cache-storage-ci-url]: https://travis-ci.org/bahmutov/cache-storage
+[caches-storage-icon]: https://nodei.co/npm/caches-storage.png?downloads=true
+[caches-storage-url]: https://npmjs.org/package/caches-storage
+[caches-storage-ci-image]: https://travis-ci.org/bahmutov/caches-storage.png?branch=master
+[caches-storage-ci-url]: https://travis-ci.org/bahmutov/caches-storage
 [semantic-image]: https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg
 [semantic-url]: https://github.com/semantic-release/semantic-release
