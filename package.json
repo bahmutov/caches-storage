@@ -1,0 +1,33 @@
+{
+  "name": "cache-storage",
+  "version": "1.0.0",
+  "description": "It is just like localStorage - but built on top of Cache API",
+  "main": "src/cache-storage.js",
+  "dependencies": {},
+  "devDependencies": {
+    "standard": "5.4.1",
+    "webpack": "1.12.9"
+  },
+  "scripts": {
+    "test": "npm run lint",
+    "lint": "standard src/*.js",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bahmutov/caches-storage.git"
+  },
+  "keywords": [
+    "storage",
+    "api",
+    "cache",
+    "caches",
+    "worker"
+  ],
+  "author": "Gleb Bahmutov <gleb.bahmutov@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bahmutov/caches-storage/issues"
+  },
+  "homepage": "https://github.com/bahmutov/caches-storage#readme"
+}
